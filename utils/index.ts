@@ -1,0 +1,29 @@
+import { defineConfig } from '@dethcrypto/eth-sdk'
+import { TokenConfig } from "../interfaces";
+
+export const tokenConfig = [
+    {
+       label: 'Dai',
+       iconUrl: '/dai.png'
+    },
+    {
+        label: 'USD Coin', 
+        icon: '/usdc.png'
+    },
+    {
+        label: 'Maker',
+        iconUrl: '/maker.png'
+    }
+] as TokenConfig[];
+
+
+
+export const ethSdkConfig = defineConfig({
+  contracts: {
+    mainnet: {
+      dai: '0x6b175474e89094c44da98b954eedeac495271d0f',
+      usdc: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+      maker: '0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2'
+    },
+  },
+})
